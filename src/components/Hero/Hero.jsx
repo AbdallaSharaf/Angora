@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import image1 from "../../assets/images/hero/hero-1.png";
-import image2 from "../../assets/images/hero/hero-2.png";
-import image3 from "../../assets/images/hero/hero-3.png";
+import image1 from "../../assets/images/hero-1.jpg";
+import image2 from "../../assets/images/hero-2.jpg";
+import image3 from "../../assets/images/hero-3.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';

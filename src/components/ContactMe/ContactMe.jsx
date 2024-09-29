@@ -27,7 +27,7 @@ const ContactMe = () => {
   return (
     <div id="contact" className="py-[100px] bg-gray-100 bg-opacity-20">
         <div className="relative flex flex-col group justify-center items-center">
-                <div className="absolute font-['poppins'] -top-[2px] font-[900] text-[4.5rem] leading-10 text-opacity-20 text-gray-400">
+                <div className="absolute font-['poppins'] top-[3px] font-[900] text-[4.5rem] leading-10 text-opacity-20 text-gray-400">
                     G
                 </div>
                 <div className="text-[42px] font-bold mb-3">Get In Touch</div>

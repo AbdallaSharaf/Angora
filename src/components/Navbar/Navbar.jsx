@@ -2,7 +2,7 @@ import { Bars3Icon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import imageLight from '../../assets/images/logo-white.png'
-import imageDark from '../../assets/images/logo-dark.png'
+import imageDark from '../../assets/images/logo-red.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import "@fontsource/poppins";

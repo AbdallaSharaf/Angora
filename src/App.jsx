@@ -2,10 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
-import About from './components/About/About'
-import Mission from './components/mission/mission'
-import Team from './components/Team/Team'
-import Projects from './components/Projects/Projects'
+// import About from './components/About/About'
+// import Mission from './components/mission/mission'
+// import Team from './components/Team/Team'
+// import Projects from './components/Projects/Projects'
 import Services from './components/Services/Services'
 import Clients from './components/Clients/Clients'
 import Posts from './components/Posts/Posts'
@@ -15,6 +15,8 @@ import ContactMe from './components/ContactMe/ContactMe'
 import GoogleMapComponent from './components/Map/Map'
 import Footer from './components/Footer/Footer'
 import 'leaflet/dist/leaflet.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   return (
@@ -25,10 +27,10 @@ const App = () => {
           transition={{duration:1 , delay:0.25}}>
           <Navbar />
           <Hero />
-          <About />
+          {/* <About />
           <Mission />
           <Team />
-          <Projects />
+          <Projects /> */}
           <Services />
           <Clients />
           <Posts />
