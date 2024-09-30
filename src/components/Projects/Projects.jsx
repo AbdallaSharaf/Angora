@@ -4,9 +4,18 @@ import { Link } from "react-router-dom";
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import { motion, AnimatePresence } from "framer-motion";
+import iconImage from '../../assets/images/download-icon-double+arrow+doublechevronleftright+left+right+arrow+icon-1320185729067056308_24.png'; // Import the image
 
 // Import all images using Vite's import.meta.glob
 const allImages = import.meta.glob('../../assets/images/projects/*.{jpg,png}', { eager: true });
+
+const delimiterIconStyles = {
+  width: '30px',
+  height: '30px',
+  backgroundSize: 'cover',
+  borderRadius: 'none',
+  backgroundImage: `url(${iconImage})`  // Use imported image
+};
 
 const images = {
     Web: [],
@@ -106,11 +115,11 @@ const Projects = () => {
                 <ReactBeforeSliderComponent
                   firstImage={{ imageUrl: image.url, alt: image.name }}
                   secondImage={{ imageUrl: array[index + 1].url, alt: array[index + 1].name }}
-                  delimiterIconStyles={{ display: 'none' }}
+                  delimiterIconStyles={delimiterIconStyles} // Hide default icon
                 />
-              ) : (
-                <img src={image.url} alt={image.name} className="w-full h-auto object-cover" />
-              )}
+            ) : (
+              <img src={image.url} alt={image.name} className="w-full h-auto object-cover" />
+            )}
             </motion.div>
           ))}
         </AnimatePresence>

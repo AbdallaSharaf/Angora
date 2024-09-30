@@ -30,7 +30,7 @@ const Team = () => {
         {teamData.map((item)=>
         <div key={item.name} className='flex flex-col items-center justify-center group overflow-hidden'>
             <div className='w-full h-full overflow-hidden relative'>
-            <img className='transition-transform duration-500 group-hover:scale-110' src={item.img} alt={item.name}/>
+            <img className='transition-transform duration-500 group-hover:scale-110 mx-auto' src={item.img} alt={item.name}/>
             <div className='bg-[#f25454] absolute top-0 w-full h-full opacity-0 bg-opacity-80 group-hover:opacity-100 flex items-center justify-center transition-all duration-300 ease-in-out'>
                 <div className='flex space-x-4'>
                 <FontAwesomeIcon icon={faTwitter} className='text-white p-2 mx-2 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out'/>
