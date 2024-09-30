@@ -21,6 +21,7 @@
     "framer-motion": "^11.9.0",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
+    "react-before-after-slider-component": "^1.1.8",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.1",

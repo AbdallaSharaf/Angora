@@ -1,6 +1,8 @@
 import { useState } from "react";
 import React from 'react';
 import { Link } from "react-router-dom";
+import ReactBeforeSliderComponent from 'react-before-after-slider-component';
+import 'react-before-after-slider-component/dist/build.css';
 import { motion, AnimatePresence } from "framer-motion";
 
 // Import all images using Vite's import.meta.glob
@@ -52,9 +54,14 @@ const Projects = () => {
     visible: { opacity: 1, scale: 1, x: 0 },    // Full visibility, normal size, no horizontal offset
     exit: { opacity: 0, scale: 0.8, x: -50 }    // Slide out to left
   };
-
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
-    <div id="about" className="py-[100px] bg-gray-100 bg-opacity-50">
+    <div id="projects" className="pt-[100px] bg-gray-100 bg-opacity-50">
       {/* Heading Section */}
       <div className="relative flex flex-col justify-center items-center group">
         <div className="absolute font-['poppins'] -top-[5px] font-[900] text-[5rem] leading-10 text-opacity-20 text-gray-400">
@@ -83,9 +90,9 @@ const Projects = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8">
+      <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
         <AnimatePresence>
-          {getFilteredImages().map((image, index) => (
+          {getFilteredImages().map((image, index, array) => (
             <motion.div
               key={index}
               className="relative group h-auto"
@@ -95,20 +102,22 @@ const Projects = () => {
               exit="exit"
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <img src={image.url} alt={image.name} className="w-full h-auto object-cover" />
-              <Link onClick={openProjectStyle} to="#projectstyle">
-                <div className="absolute inset-0 mx-auto my-auto w-[98%] h-[98%] flex flex-col justify-center p-4 items-center bg-white bg-opacity-95 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
-                  <h2 className="text-lg font-semibold transform translate-y-[-30%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                    {image.name || 'Image Title'}
-                  </h2>
-                  <p className="text-gray-600 mt-1 text-center transform translate-y-[30%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                    {image.category || 'Image Category'}
-                  </p>
-                </div>
-              </Link>
+              {index + 1 < array.length ? (
+                <ReactBeforeSliderComponent
+                  firstImage={{ imageUrl: image.url, alt: image.name }}
+                  secondImage={{ imageUrl: array[index + 1].url, alt: array[index + 1].name }}
+                  delimiterIconStyles={{ display: 'none' }}
+                />
+              ) : (
+                <img src={image.url} alt={image.name} className="w-full h-auto object-cover" />
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
+      </div>
+      <div className="py-10 flex flex-col md:flex-row justify-between items-center w-[90%] md:w-[80%] lg:w-[59%] mx-auto">
+        <h1 className="text-4xl ">Do you have any ideas?</h1>
+        <Link onClick={()=>scrollToContact()} to='#contact'><button className="font-bold text-white bg-[#f25454] py-4 px-8 text-sm hover:opacity-80 transition-all duration-300 ease-in-out">Contact Us</button></Link>
       </div>
     </div>
   );

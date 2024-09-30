@@ -4,8 +4,8 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 // import About from './components/About/About'
 // import Mission from './components/mission/mission'
-// import Team from './components/Team/Team'
-// import Projects from './components/Projects/Projects'
+import Team from './components/Team/Team'
+import Projects from './components/Projects/Projects'
 import Services from './components/Services/Services'
 import Clients from './components/Clients/Clients'
 import Posts from './components/Posts/Posts'
@@ -27,10 +27,10 @@ const App = () => {
           transition={{duration:1 , delay:0.25}}>
           <Navbar />
           <Hero />
-          {/* <About />
-          <Mission />
+          {/* <About /> */}
+          {/* <Mission /> */}
           <Team />
-          <Projects /> */}
+          <Projects />
           <Services />
           <Clients />
           <Posts />
