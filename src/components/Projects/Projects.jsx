@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import { motion, AnimatePresence } from "framer-motion";
+import './Project.css'
 import iconImage from '../../assets/images/download-icon-double+arrow+doublechevronleftright+left+right+arrow+icon-1320185729067056308_24.png'; // Import the image
 
 // Import all images using Vite's import.meta.glob
@@ -14,7 +15,8 @@ const delimiterIconStyles = {
   height: '30px',
   backgroundSize: 'cover',
   borderRadius: 'none',
-  backgroundImage: `url(${iconImage})`  // Use imported image
+  backgroundImage: `url(${iconImage})`,
+  animation: 'pulse 2s infinite',
 };
 
 const images = {
@@ -45,10 +47,6 @@ const Projects = () => {
     setSelectedCategory(category);
   };
 
-  const openProjectStyle = () => {
-    // Implement this function if needed
-  };
-
   // Get filtered images based on the selected category
   const getFilteredImages = () => {
     if (selectedCategory === 'All') {
@@ -70,7 +68,7 @@ const Projects = () => {
     }
   };
   return (
-    <div id="projects" className="pt-[100px] bg-gray-100 bg-opacity-50">
+    <div id="projects" className="pt-[100px] -scroll-m-14 md:scroll-m-0 bg-gray-100 bg-opacity-50">
       {/* Heading Section */}
       <div className="relative flex flex-col justify-center items-center group">
         <div className="absolute font-['poppins'] -top-[5px] font-[900] text-[5rem] leading-10 text-opacity-20 text-gray-400">

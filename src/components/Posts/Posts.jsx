@@ -11,7 +11,7 @@ const cardData = [
 
 const Posts = () => {
   return (
-    <div id="blog" className="py-[100px] bg-gray-100 bg-opacity-20">
+    <div id="blog" className="py-[100px] -scroll-m-14 md:scroll-m-0 bg-gray-100 bg-opacity-20">
     <div className="relative flex flex-col justify-center items-center group">
         <div className="absolute font-['poppins'] -top-[2px] font-[900] text-[4.5rem] leading-10 text-opacity-20 text-gray-400">
             B

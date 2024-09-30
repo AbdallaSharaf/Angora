@@ -37,7 +37,7 @@ const ContactMe = () => {
   });
 
   return (
-    <div id="contact" className="py-[100px] bg-gray-100 bg-opacity-20">
+    <div id="contact" className="py-[100px] bg-gray-100 bg-opacity-20 -scroll-m-14 md:scroll-m-0">
         <div className="relative flex flex-col group justify-center items-center">
                 <div className="absolute font-['poppins'] top-[3px] font-[900] text-[4.5rem] leading-10 text-opacity-20 text-gray-400">
                     G
@@ -48,7 +48,7 @@ const ContactMe = () => {
                 Mauris at tempus mi, ut iaculis dui. Integer laoreet mattis justo nec pretium. Ut nibh elit, fermentum vel hendrerit vel, dictum nec velit. Morbi volutpat suscipit.
                 </div>
         </div>
-        <div className='grid grid-col-1 lg:grid-cols-2 w-[90%] md:w-[85%] lg:w-[75%] mt-20 gap-x-8 mx-auto'>
+        <div id='form' className='grid grid-col-1 lg:grid-cols-2 w-[90%] md:w-[85%] lg:w-[75%] mt-20 gap-x-8 mx-auto'>
             <div className=''>
             <h1 className='text-4xl leading-none mb-8 font-semibold'>Get answers and advices from professional consultants.</h1>
           <div className='flex group py-5 border-b-[1px] border-gray-500 border-opacity-10 gap-4'>

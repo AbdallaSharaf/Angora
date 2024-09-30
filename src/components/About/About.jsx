@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div id='about' className='py-[100px]'>
+    <div id='about' className='py-[100px] -scroll-m-14 md:scroll-m-0'>
         <div className='relative flex flex-col justify-center items-center group'>
             <div className='absolute font-["poppins"] -top-[5px] font-[900] text-[5rem] leading-10 text-opacity-20 text-gray-400'>
                 A

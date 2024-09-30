@@ -16,7 +16,7 @@ const Services = () => {
       setIsModalOpen(false);
     };
   return (
-    <div id='services' className='pt-[100px] bg-white'>
+    <div id='services' className='pt-[100px] bg-white -scroll-m-14 md:scroll-m-0'>
         <div className='relative flex flex-col justify-center items-center group'>
             <div className='absolute font-["poppins"] -top-[2px] font-[900] text-[5rem] leading-10 text-opacity-20 text-gray-400'>
                 S
